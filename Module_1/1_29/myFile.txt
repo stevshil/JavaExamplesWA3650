@@ -1,0 +1,2 @@
+This code reads a text file named "myFile.txt" line by line and prints each line to the console. 
+The FileReader opens the file for reading, BufferedReader provides buffering for improved performance, and finally, both streams are closed to release resources.
