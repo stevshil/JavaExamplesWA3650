@@ -2,3 +2,5 @@
 *.zip
 **/target
 **/.mvn
+**/build
+**/bin
