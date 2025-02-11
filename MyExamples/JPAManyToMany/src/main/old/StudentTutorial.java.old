@@ -1,0 +1,20 @@
+package com.dbex.demo;
+
+import jakarta.persistence.*; // for Spring Boot 3
+
+@Entity
+public class StudentTutorial {
+    
+    @EmbeddedId
+    StudentTutorialKey id;
+    
+    @ManyToOne
+    @MapsId("studentId")
+    @JoinColumn(name = "student_id")
+    Student student;
+
+    @ManyToOne
+    @MapsId("tutorialId")
+    @JoinColumn(name = "tutorial_id")
+    Tutorial tutorial;
+}
