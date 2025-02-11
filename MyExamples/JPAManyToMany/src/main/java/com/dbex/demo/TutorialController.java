@@ -126,4 +126,18 @@ public class TutorialController {
 		}
 	}
 
+	@GetMapping("/tutorialstakenby/{firstname}")
+	public ResponseEntity<List<Tutorial>> findTutorialsByStudentFirstname(@PathVariable("firstname") String firstname) {
+		try {
+			List<Tutorial> tutorials = tutorialRepository.findTutorialsByStudentFirstname(firstname);
+
+			if (tutorials.isEmpty()) {
+				return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+			}
+			return new ResponseEntity<>(tutorials, HttpStatus.OK);
+		} catch (Exception e) {
+			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+	}
+
 }
