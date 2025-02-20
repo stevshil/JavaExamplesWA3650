@@ -11,6 +11,7 @@ This file is the API requests of /api/hello and /api/health
 
 BasicConfig.java  
 Contains the security chain which defines which pages can be accessed and how.
+This time we have allowed the /api/health URL to be accessed without authentication to show the chain.
 
 SecurityApplication.java  
 The starting point
@@ -71,6 +72,16 @@ Password: password
 Click **Send**
 
 You should now see the text **Hello, World!** in the bottom box.
+
+#### Now /api/health
+
+For this you can set the **Authorization** to **No Auth** and set the URL to
+
+```
+localhost:8080/api/health
+```
+
+Click **Send** and you will see **200 OK** as the status and **OK** as the text.
 
 ## Summary
 
