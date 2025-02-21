@@ -1,8 +1,10 @@
-# Simple use of Spring Boot Basic security
+# Simple use of Spring Boot Basic security = Allowing URLs without authentication
 
 In this example we simply use the default user in the application.properties file.
 
 The application.properties file contains a bcrypted version of the word **password**. In your REST header for BASIC AUTH you simply pass the unencrypted version. The application code uses the bcrypt encoder/decoder to work out the password.
+
+This version of the authentication example allows for the /api/heath URL to be reached without authentication.
 
 ## The files
 
